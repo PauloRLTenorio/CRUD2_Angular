@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'; // Importa o operador `map` do RxJS
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,10 @@ export class ItemService {
   constructor(private readonly http: HttpClient) {}
 
   // Método para listar todos os itens
-  getItems(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getItems(): Observable<any[]> {
+    return this.http.get<any>(this.apiUrl).pipe(
+      map(response => response.data) // Acessa a propriedade `data` da resposta
+    );
   }
 
   // Método para obter um item específico
