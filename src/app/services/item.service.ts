@@ -11,11 +11,16 @@ export class ItemService {
 
   constructor(private readonly http: HttpClient) {}
 
-  // Método para listar todos os itens
-  getItems(): Observable<any[]> {
-    return this.http.get<any>(this.apiUrl).pipe(
+  // Método para listar itens paginados
+  getItems(page: number = 1): Observable<any[]> {
+    return this.http.get<any>(`${this.apiUrl}?page=${page}`).pipe(
       map(response => response.data) // Acessa a propriedade `data` da resposta
     );
+  }
+
+  // Método para listar todos os itens sem paginação
+  getAllItems(): Observable<any[]> {
+    return this.http.get<any>(this.apiUrl);
   }
 
   // Método para obter um item específico
