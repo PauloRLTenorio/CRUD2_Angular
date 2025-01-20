@@ -15,6 +15,8 @@
     <ul *ngIf="searchedItems.length > 0">
       <li *ngFor="let item of searchedItems">
         {{ item.id }} - {{ item.name }} - {{ item.description }} - R$ {{ item.price }}
+        <app-edit-item [item]="item"></app-edit-item>
+        <app-delete-item [itemId]="item.id" (delete)="handleDelete($event)"></app-delete-item>
       </li>
     </ul>
     <p *ngIf="searchedItems.length === 0 && searchExecuted">Nenhum item encontrado.</p>

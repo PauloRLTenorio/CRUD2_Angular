@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ItemService } from '../services/item.service';
 import { SearchItemsComponent } from '../search-items/search-items.component';
+import { EditItemComponent } from '../edit-item/edit-item.component';
+import { DeleteItemComponent } from '../delete-item/delete-item.component';
+
 
 @Component({
   selector: 'app-list-items',
   standalone: true,
-  imports: [CommonModule, RouterModule, SearchItemsComponent],
+  imports: [CommonModule, RouterModule, SearchItemsComponent, EditItemComponent, DeleteItemComponent],
   templateUrl: './list-items.component.html',
   styleUrls: ['./list-items.component.css'],
 })
@@ -47,6 +50,19 @@ export class ListItemsComponent implements OnInit {
       );
     });
     this.searchExecuted = true;
+  }
+
+  handleDelete(itemId: number) {
+    this.itemService.deleteItem(itemId).subscribe({
+      next: () => {
+        alert('Item excluído com sucesso!');
+        this.searchedItems = this.searchedItems.filter(item => item.id !== itemId);
+      },
+      error: (error) => {
+        console.error('Erro ao excluir item:', error);
+        alert('Erro ao excluir item. Tente novamente.');
+      }
+    });
   }
 
 
