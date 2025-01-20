@@ -1,1 +1,26 @@
-<p>list-items works!</p>
+<div class="container">
+   
+    <!-- Usado para exibir a lista de itens recebidos do backend. -->
+    <!-- <h2>Itens recebidos do backend:</h2>
+    <ul>
+      <li *ngFor="let item of items">
+        {{ item.id }} - {{ item.name }} - {{ item.description }} - R$ {{ item.price }}
+      </li>
+    </ul> -->
+
+    <h2>Pesquisar Itens</h2>
+    <app-search-items (search)="handleSearch($event)"></app-search-items>
+  
+    <h2 *ngIf="searchExecuted">Itens encontrados:</h2> <!-- Exibe a frase apenas após a pesquisa -->
+    <ul *ngIf="searchedItems.length > 0">
+      <li *ngFor="let item of searchedItems">
+        {{ item.id }} - {{ item.name }} - {{ item.description }} - R$ {{ item.price }}
+      </li>
+    </ul>
+    <p *ngIf="searchedItems.length === 0 && searchExecuted">Nenhum item encontrado.</p>
+
+
+  
+    <!-- Botão "Criar Novo Item" Link para criar um novo item -->
+    <a routerLink="/create" class="btn btn-primary mt-3">Criar Novo Item</a>
+  </div>
