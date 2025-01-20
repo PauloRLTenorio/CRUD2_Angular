@@ -1,10 +1,6 @@
 <div class="container">
-  <h1>{{ title }}</h1>
-  <h2>Itens recebidos do backend:</h2>
-  <ul>
-    <li *ngFor="let item of items">
-      <!-- {{ item }} Aqui o item estava sendo exibido diretamente por isto estava apresentando no frontend assim: [object Object] -->
-      {{ item.id }} - {{ item.name }} - {{ item.description }} - R$ {{ item.price }}
-    </li>
-  </ul>
+  <h1>CRUD ANGULAR</h1>
+<br>
+  <router-outlet></router-outlet><!-- Local onde o conteúdo do componente associado à rota ativa será renderizado. -->
 </div>
+

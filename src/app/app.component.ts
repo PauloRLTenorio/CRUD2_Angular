@@ -1,29 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ItemService } from './services/item.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule], // Suporte para *ngFor
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'CRUD_Angular';
-  items: any[] = [];
-
-  constructor(private readonly itemService: ItemService) {}
-
-  ngOnInit() {
-    this.itemService.getItems().subscribe({
-      next: (data) => {
-        console.log('Itens recebidos:', data);
-        this.items = data;
-      },
-      error: (error) => {
-        console.error('Erro ao carregar os itens:', error);
-      },
-    });
-  }
 }
