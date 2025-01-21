@@ -11,9 +11,9 @@ export class EditItemComponent implements OnInit {
   item: any = { name: '', description: '', price: null }; // Objeto para edição
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private itemService: ItemService
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly itemService: ItemService
   ) {}
 
   ngOnInit() {
