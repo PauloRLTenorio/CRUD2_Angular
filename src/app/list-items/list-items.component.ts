@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ItemService } from '../services/item.service';
 import { SearchItemsComponent } from '../search-items/search-items.component';
-import { EditItemComponent } from '../edit-item/edit-item.component';
 import { DeleteItemComponent } from '../delete-item/delete-item.component';
 
 
 @Component({
   selector: 'app-list-items',
   standalone: true,
-  imports: [CommonModule, RouterModule, SearchItemsComponent, EditItemComponent, DeleteItemComponent],
+  imports: [CommonModule, RouterModule, SearchItemsComponent, DeleteItemComponent],
   templateUrl: './list-items.component.html',
   styleUrls: ['./list-items.component.css'],
 })
