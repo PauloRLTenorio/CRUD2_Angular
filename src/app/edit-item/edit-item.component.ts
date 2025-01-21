@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ItemService } from '../services/item.service';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-edit-item',
   templateUrl: './edit-item.component.html',
   styleUrls: ['./edit-item.component.css'],
+  standalone: true,
+  imports: [CommonModule, FormsModule] // Adicione o FormsModule aqui
 })
 export class EditItemComponent implements OnInit {
   item: any = { name: '', description: '', price: null }; // Objeto para edição
