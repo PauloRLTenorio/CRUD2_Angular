@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: 'list', component: ListItemsComponent }, // Rota para listagem
   { path: 'create', component: CreateItemComponent }, // Rota para criar item
   { path: 'edit/:id', component: EditItemComponent }, // Rota para editar um item
-  { path: '**', redirectTo: 'list' }, // Redireciona rotas inválidas para 'list'
+  { path: '**', redirectTo: 'list' }, // Redireciona rotas inválidas para 'list'. Colocar esta rota sempre no final da lista, como esta aqui.
 ];
