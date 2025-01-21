@@ -56,7 +56,8 @@ export class ListItemsComponent implements OnInit {
     this.itemService.deleteItem(itemId).subscribe({
       next: () => {
         alert('Item excluído com sucesso!');
-        this.searchedItems = this.searchedItems.filter(item => item.id !== itemId);
+        this.items = this.items.filter(item => item.id !== itemId); // Atualiza a lista principal
+        this.searchedItems = this.searchedItems.filter(item => item.id !== itemId); // Atualiza os itens pesquisados
       },
       error: (error) => {
         console.error('Erro ao excluir item:', error);
