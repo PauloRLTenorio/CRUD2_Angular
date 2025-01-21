@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ListItemsComponent } from './list-items/list-items.component';
 import { CreateItemComponent } from './create-item/create-item.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'list', pathMatch: 'full' }, // Redireciona a raiz para a rota 'list'
