@@ -23,16 +23,21 @@ export class EditItemComponent implements OnInit {
 
   ngOnInit() {
     const itemId = this.route.snapshot.paramMap.get('id'); // Obtém o ID da rota
+    console.log('Item ID:', itemId); // DEBUG: Verifica o ID capturado da rota
     if (itemId) {
       this.itemService.getItemById(Number(itemId)).subscribe({
         next: (data) => {
           this.item = data; // Preenche os campos com os dados do item
+          console.log('Dados retornados:', data); // DEBUG: Verifica os dados retornados pela API
         },
         error: (error) => {
           console.error('Erro ao carregar item:', error);
           alert('Erro ao carregar o item. Tente novamente.');
         },
       });
+    } else {
+      alert('ID inválido. Redirecionando para a listagem.');
+      this.router.navigate(['/list']); // Redireciona se o ID for inválido
     }
   }
 
