@@ -1,8 +1,11 @@
 <div class="container">
   <h2>Pesquisar Itens</h2>
 
-  <!-- Reintroduzindo o componente app-search-items -->
-  <app-search-items (search)="handleSearch($event)"></app-search-items>
+  <!-- Contêiner para alinhar o campo de pesquisa e o botão "Criar Novo Item" -->
+  <div class="action-container">
+    <app-search-items (search)="handleSearch($event)"></app-search-items>
+    <a routerLink="/create" class="btn btn-create">Criar Novo Item</a>
+  </div>
 
   <!-- Exibe os itens encontrados -->
   <h2 *ngIf="searchExecuted">Itens encontrados:</h2>
@@ -14,7 +17,4 @@
     </li>
   </ul>
   <p *ngIf="searchedItems.length === 0 && searchExecuted">Nenhum item encontrado.</p>
-
-  <!-- Botão "Criar Novo Item" -->
-  <a routerLink="/create" class="btn btn-create">Criar Novo Item</a>
 </div>
