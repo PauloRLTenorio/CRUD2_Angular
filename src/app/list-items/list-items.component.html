@@ -5,12 +5,12 @@
   <div class="action-container">
     <app-search-items (search)="handleSearch($event)"></app-search-items>
     <app-create-item-button></app-create-item-button>
+    <!-- Exibe os itens encontrados -->
+    <app-found-items
+      [items]="searchedItems"
+      [searchExecuted]="searchExecuted"
+      (delete)="handleDelete($event)">
+    </app-found-items>
   </div>
 
-  <!-- Exibe os itens encontrados -->
-  <app-found-items
-    [items]="searchedItems"
-    [searchExecuted]="searchExecuted"
-    (delete)="handleDelete($event)">
-  </app-found-items>
 </div>
