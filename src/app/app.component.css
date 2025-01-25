@@ -1,0 +1,9 @@
+/* Centraliza o conteúdo do componente */
+.container {
+    width: 100%; /* Largura máxima do componente */
+    margin: 10px auto; /* Centraliza horizontalmente e adiciona margem superior */
+    display: block; /* Garante que o contêiner seja um bloco */
+    
+    
+}
+  
