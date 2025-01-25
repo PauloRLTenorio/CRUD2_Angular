@@ -1,15 +1,15 @@
 <div class="container">
-    <form (ngSubmit)="onSearch()" class="mb-4">
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          [(ngModel)]="searchQuery"
-          name="searchQuery"
-          placeholder="Digite nome, descrição ou preço"
-          required
-        />
-      </div>
-      <button type="submit" class="btn btn-primary mt-2">Pesquisar</button>
-    </form>
-  </div>
+  <form (ngSubmit)="onSearch()" class="search-form">
+    <div class="search-container">
+      <input
+        type="text"
+        class="form-control search-input"
+        [(ngModel)]="searchQuery"
+        name="searchQuery"
+        placeholder="Digite nome, descrição ou preço"
+        required
+      />
+      <button type="submit" class="btn btn-primary search-button">Pesquisar</button>
+    </div>
+  </form>
+</div>
