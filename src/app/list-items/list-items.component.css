@@ -4,6 +4,8 @@
   flex-direction: column; /* Alinha os elementos verticalmente */
   gap: 20px; /* Espaçamento vertical entre os elementos */
   margin-bottom: 20px; /* Espaçamento inferior */
+  width: 50%; /* Define a largura do contêiner como 50% */
+  align-self: center; /* Centraliza o contêiner horizontalmente */
 }
 
 /* Ajusta o botão "Criar Novo Item" */
