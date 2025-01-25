@@ -1,91 +1,34 @@
-/* Estiliza o container */
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Contêiner para alinhar o campo de pesquisa e o botão "Criar Novo Item" */
+.action-container {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  gap: 20px; /* Espaçamento vertical entre os elementos */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Ajusta o botão "Criar Novo Item" */
+.btn-create {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #218838;
+}
+
+/* Responsividade (opcional: já está alinhado verticalmente por padrão) */
+@media (max-width: 768px) {
+  .action-container {
+    align-items: stretch; /* Garante que os elementos ocupem a largura total */
   }
-  
-  /* Título */
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+
+  .btn-create {
+    width: 100%; /* Botão ocupa toda a largura */
   }
-  
-  /* Campo de pesquisa */
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  input[type="text"]:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  /* Botões alinhados */
-  button, a.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    margin-right: 10px; /* Espaçamento entre os botões */
-  }
-  
-  button.btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  a.btn-create {
-    background-color: #28a745;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  a.btn-create:hover {
-    background-color: #218838;
-  }
-  
-  /* Alinhamento dos botões */
-  .buttons-container {
-    display: flex;
-    justify-content: space-between; /* Distribui os botões */
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .buttons-container {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    button, a.btn {
-      width: 100%;
-      margin-bottom: 10px; /* Espaçamento entre botões empilhados */
-    }
-  
-    button:last-child, a.btn:last-child {
-      margin-bottom: 0;
-    }
-  }
+}
