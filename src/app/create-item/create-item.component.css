@@ -1,0 +1,50 @@
+/* Centraliza o formulário e adiciona padding */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estiliza os campos de entrada */
+  .form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Foco no campo */
+  .form-control:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Espaçamento entre os grupos */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estiliza o botão */
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .btn-success:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
