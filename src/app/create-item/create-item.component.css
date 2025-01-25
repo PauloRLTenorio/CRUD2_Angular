@@ -1,50 +1,69 @@
 /* Centraliza o formulário e adiciona padding */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Estilo do formulário */
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alinhamento vertical entre os campos e o botão */
+.create-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os campos e o botão */
+}
+/* Estiliza os campos de entrada */
+.create-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Foco no campo */
+.create-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+/* Estiliza o botão */
+.create-button {
+  width: 100%; /* Faz o botão ocupar a largura total */
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #218838;
+}
+
+.create-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .create-container {
+    gap: 15px;
   }
-  
-  /* Estiliza os campos de entrada */
-  .form-control {
+
+  .create-button {
+    width: 100%;
     border-radius: 8px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
   }
-  
-  /* Foco no campo */
-  .form-control:focus {
-    outline: none;
-    border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-  }
-  
-  /* Espaçamento entre os grupos */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Estiliza o botão */
-  .btn-success {
-    background-color: #28a745;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-success:hover {
-    background-color: #218838;
-  }
-  
-  .btn-success:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-  }
+}
