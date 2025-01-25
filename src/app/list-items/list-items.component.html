@@ -1,10 +1,9 @@
 <div class="container">
-  <h2>Pesquisar Itens</h2>
 
   <!-- Contêiner para alinhar o campo de pesquisa e o botão "Criar Novo Item" -->
   <div class="action-container">
     <app-search-items (search)="handleSearch($event)"></app-search-items>
-    <a routerLink="/create" class="btn btn-create">Criar Novo Item</a>
+    <app-create-item-button></app-create-item-button>
   </div>
 
   <!-- Exibe os itens encontrados -->
