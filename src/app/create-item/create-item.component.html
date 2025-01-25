@@ -1,13 +1,14 @@
 <div class="container">
-    <h2>Criar Novo Item</h2>
-    <form (ngSubmit)="onSubmit()" class="mb-4">
+  <h2>Criar Novo Item</h2>
+  <form (ngSubmit)="onSubmit()" class="create-form">
+    <div class="create-container">
       <div class="form-group">
         <label for="name">Nome:</label>
         <input
           type="text"
           id="name"
           name="name"
-          class="form-control"
+          class="form-control create-input"
           [(ngModel)]="item.name"
           required
         />
@@ -17,7 +18,7 @@
         <textarea
           id="description"
           name="description"
-          class="form-control"
+          class="form-control create-input"
           [(ngModel)]="item.description"
           required
         ></textarea>
@@ -28,11 +29,12 @@
           type="number"
           id="price"
           name="price"
-          class="form-control"
+          class="form-control create-input"
           [(ngModel)]="item.price"
           required
         />
       </div>
-      <button type="submit" class="btn btn-success mt-3">Salvar</button>
-    </form>
-  </div>
+      <button type="submit" class="btn btn-success create-button">Salvar</button>
+    </div>
+  </form>
+</div>
