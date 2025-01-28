@@ -1,16 +1,15 @@
 <div class="container">
-  <h2>Pesquisar Itens</h2>
-
   <!-- Contêiner para alinhar o campo de pesquisa e o botão "Criar Novo Item" -->
   <div class="action-container">
     <app-search-items (search)="handleSearch($event)"></app-search-items>
     <app-create-item-button></app-create-item-button>
-    <!-- Exibe os itens encontrados -->
-    <app-found-items
-      [items]="searchedItems"
-      [searchExecuted]="searchExecuted"
-      (delete)="handleDelete($event)">
-    </app-found-items>
   </div>
 
+  <!-- Título e itens encontrados -->
+  <h2 class="found-items-title" *ngIf="searchExecuted"></h2>
+  <app-found-items
+    [items]="searchedItems"
+    [searchExecuted]="searchExecuted"
+    (delete)="handleDelete($event)">
+  </app-found-items>
 </div>
