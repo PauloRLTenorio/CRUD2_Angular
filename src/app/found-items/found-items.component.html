@@ -2,7 +2,7 @@
 <ul *ngIf="items.length > 0">
   <li *ngFor="let item of items">
     {{ item.id }} - {{ item.name }} - {{ item.description }} - R$ {{ item.price }}
-    <a [routerLink]="['/edit', item.id]" class="btn btn-warning">Editar</a>
+    <app-edit-item-button [itemId]="item.id"></app-edit-item-button>
     <app-delete-item [itemId]="item.id" (delete)="onDelete($event)"></app-delete-item>
   </li>
 </ul>
