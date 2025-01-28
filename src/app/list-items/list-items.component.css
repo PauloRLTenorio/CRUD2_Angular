@@ -8,29 +8,15 @@
   align-self: center; /* Centraliza o contêiner horizontalmente */
 }
 
-/* Ajusta o botão "Criar Novo Item" */
-.btn-create {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  background-color: #28a745;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+/* Centraliza o título "Itens encontrados" */
+.found-items-title {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.btn-create:hover {
-  background-color: #218838;
-}
-
-/* Responsividade (opcional: já está alinhado verticalmente por padrão) */
-@media (max-width: 768px) {
-  .action-container {
-    align-items: stretch; /* Garante que os elementos ocupem a largura total */
-  }
-
-  .btn-create {
-    width: 100%; /* Botão ocupa toda a largura */
-  }
+/* Ajuste do contêiner geral */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
