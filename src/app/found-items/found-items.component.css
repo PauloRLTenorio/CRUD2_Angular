@@ -1,20 +1,30 @@
 ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .btn-warning {
-    margin-left: 10px;
-  }
-  
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que o texto e botões pulem para a próxima linha */
+  justify-content: space-between;
+  align-items: center;
+}
+
+li > span {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  margin-right: 20px; /* Espaçamento entre o texto e o botão */
+  word-break: break-word; /* Quebra o texto caso seja muito longo */
+}
+
+app-edit-item-button {
+  margin-left: auto; /* Empurra o botão "Editar" para a direita */
+}
+
+app-delete-item {
+  margin-left: 10px; /* Espaçamento entre os botões */
+}
